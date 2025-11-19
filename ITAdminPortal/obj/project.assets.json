@@ -1,0 +1,143 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "System.Management.Automation/7.3.0": {
+        "type": "package"
+      }
+    }
+  },
+  "libraries": {
+    "System.Management.Automation/7.3.0": {
+      "sha512": "octq5ZAknCPX9yF2MxZNhkzhhfs0NZbRe/DuOWsA/7RNyIthkTE9FTQdjzYgYUYbflwZ+Ki/K44hnCVIufp67A==",
+      "type": "package",
+      "path": "system.management.automation/7.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Powershell_black_64.png",
+        "_manifest/spdx_2.2/manifest.spdx.json",
+        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
+        "ref/net7.0/System.Management.Automation.dll",
+        "ref/net7.0/System.Management.Automation.xml",
+        "runtimes/unix/lib/net7.0/System.Management.Automation.dll",
+        "runtimes/win/lib/net7.0/System.Management.Automation.dll",
+        "system.management.automation.7.3.0.nupkg.sha512",
+        "system.management.automation.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "System.Management.Automation >= 7.3.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\yprod\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\yprod\\OneDrive\\Desktop\\reports-it-admin\\ITAdminPortal\\ITAdminPortal.csproj",
+      "projectName": "ITAdminPortal",
+      "projectPath": "C:\\Users\\yprod\\OneDrive\\Desktop\\reports-it-admin\\ITAdminPortal\\ITAdminPortal.csproj",
+      "packagesPath": "C:\\Users\\yprod\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yprod\\OneDrive\\Desktop\\reports-it-admin\\ITAdminPortal\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\yprod\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.100"
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "System.Management.Automation": {
+            "target": "Package",
+            "version": "[7.3.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package System.Management.Automation 7.3.0 is not compatible with net6.0-windows7.0 (.NETCoreApp,Version=v6.0). Package System.Management.Automation 7.3.0 supports: net7.0 (.NETCoreApp,Version=v7.0)",
+      "libraryId": "System.Management.Automation",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}

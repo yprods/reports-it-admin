@@ -1,7 +1,0 @@
-# Example computer list
-# Add one computer name per line
-# Lines starting with # are ignored
-# PC01
-# PC02
-# SERVER01
-

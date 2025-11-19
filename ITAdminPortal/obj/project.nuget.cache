@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "Z2In7jrK4ws=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\yprod\\OneDrive\\Desktop\\reports-it-admin\\ITAdminPortal\\ITAdminPortal.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yprod\\.nuget\\packages\\system.management.automation\\7.3.0\\system.management.automation.7.3.0.nupkg.sha512",
+    "C:\\Users\\yprod\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\yprod\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\yprod\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\yprod\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.36\\microsoft.netcore.app.host.win-x64.6.0.36.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package System.Management.Automation 7.3.0 is not compatible with net6.0-windows7.0 (.NETCoreApp,Version=v6.0). Package System.Management.Automation 7.3.0 supports: net7.0 (.NETCoreApp,Version=v7.0)",
+      "projectPath": "C:\\Users\\yprod\\OneDrive\\Desktop\\reports-it-admin\\ITAdminPortal\\ITAdminPortal.csproj",
+      "filePath": "C:\\Users\\yprod\\OneDrive\\Desktop\\reports-it-admin\\ITAdminPortal\\ITAdminPortal.csproj",
+      "libraryId": "System.Management.Automation",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}
