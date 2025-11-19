@@ -1,8 +1,8 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using System.Management.Automation;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace ITAdminPortal
 {
@@ -24,15 +24,39 @@ namespace ITAdminPortal
         {
             try
             {
-                string scriptPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", script.FileName);
+                // Try multiple paths to find the script
+                string[] possiblePaths = {
+                    Path.Combine(AppDomain.CurrentDomain.BaseDirectory, script.FileName),
+                    Path.Combine(Directory.GetCurrentDirectory(), script.FileName),
+                    Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "..", "..", "..", "..", script.FileName),
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "reports-it-admin", script.FileName),
+                    script.FileName  // Try direct path
+                };
                 
-                if (!File.Exists(scriptPath))
+                string scriptPath = null;
+                foreach (string path in possiblePaths)
                 {
-                    OutputBox.Text += $"\n\nERROR: Script file not found at: {scriptPath}";
+                    if (File.Exists(path))
+                    {
+                        scriptPath = path;
+                        break;
+                    }
+                }
+                
+                if (scriptPath == null)
+                {
+                    OutputBox.Text += $"\n\nERROR: Script file not found.\n";
+                    OutputBox.Text += $"Searched in:\n";
+                    foreach (string path in possiblePaths)
+                    {
+                        OutputBox.Text += $"  - {path}\n";
+                    }
+                    OutputBox.Text += $"\nPlease ensure the script file '{script.FileName}' is in the same directory as this application or update the path.";
                     return;
                 }
 
                 OutputBox.Text += $"\n\nExecuting: {script.FileName}...\n";
+                OutputBox.Text += $"Script Path: {scriptPath}\n";
                 OutputBox.Text += "=" + new string('=', 50) + "\n\n";
 
                 ProcessStartInfo psi = new ProcessStartInfo
