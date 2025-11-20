@@ -372,17 +372,68 @@ namespace ITAdminPortal
                 "IT Admin Portal v1.0\n\n" +
                 "Cyber Style Script Gallery\n" +
                 "Comprehensive PowerShell Script Collection\n\n" +
+                "Created by: yprods\n\n" +
                 "Features:\n" +
-                "- 40+ IT Administration Scripts\n" +
+                "- 50+ IT Administration Scripts\n" +
                 "- Active Directory Management\n" +
                 "- Computer Monitoring\n" +
                 "- User Management\n" +
                 "- Security Tools\n" +
-                "- Network Tools\n\n" +
+                "- Network Tools\n" +
+                "- Computer List Management\n" +
+                "- Cyber Style Toggle\n\n" +
                 "Hebrew/English Support",
                 "About IT Admin Portal",
                 MessageBoxButton.OK,
                 MessageBoxImage.Information);
+        }
+
+        private void CyberStyleToggle_Checked(object sender, RoutedEventArgs e)
+        {
+            ApplyCyberStyle(true);
+        }
+
+        private void CyberStyleToggle_Unchecked(object sender, RoutedEventArgs e)
+        {
+            ApplyCyberStyle(false);
+        }
+
+        private void ApplyCyberStyle(bool enabled)
+        {
+            cyberStyleEnabled = enabled;
+            
+            // Find header border by name
+            Border headerBorder = this.FindName("HeaderBorder") as Border;
+            
+            if (enabled)
+            {
+                // Apply cyber style colors
+                this.Background = new SolidColorBrush(Color.FromRgb(10, 10, 10));
+                
+                if (headerBorder != null)
+                {
+                    headerBorder.Background = new SolidColorBrush(Color.FromRgb(15, 15, 35));
+                    headerBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(0, 255, 65));
+                }
+            }
+            else
+            {
+                // Apply standard Windows style
+                this.Background = new SolidColorBrush(Color.FromRgb(240, 240, 240));
+                
+                if (headerBorder != null)
+                {
+                    headerBorder.Background = new SolidColorBrush(Color.FromRgb(240, 240, 240));
+                    headerBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(200, 200, 200));
+                }
+            }
+        }
+
+        private void ComputerListButton_Click(object sender, RoutedEventArgs e)
+        {
+            ComputerListWindow computerListWindow = new ComputerListWindow();
+            computerListWindow.Owner = this;
+            computerListWindow.ShowDialog();
         }
     }
 }

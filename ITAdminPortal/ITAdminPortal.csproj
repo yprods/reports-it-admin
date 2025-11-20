@@ -16,5 +16,11 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Include="ComputerListWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>
 

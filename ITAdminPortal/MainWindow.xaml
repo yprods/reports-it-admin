@@ -47,7 +47,7 @@
         </Grid.RowDefinitions>
         
         <!-- Header -->
-        <Border Grid.Row="0" Background="#FF0F0F23" BorderBrush="#FF00FF41" BorderThickness="0,0,0,2">
+        <Border x:Name="HeaderBorder" Grid.Row="0" Background="#FF0F0F23" BorderBrush="#FF00FF41" BorderThickness="0,0,0,2">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -63,6 +63,13 @@
                 </StackPanel>
                 
                 <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="20,15">
+                    <CheckBox x:Name="CyberStyleToggle" Content="Cyber Style" 
+                              IsChecked="True" Checked="CyberStyleToggle_Checked" 
+                              Unchecked="CyberStyleToggle_Unchecked" 
+                              Margin="0,0,10,0" VerticalAlignment="Center"
+                              Foreground="#FF00FF41" FontWeight="Bold"/>
+                    <Button x:Name="ComputerListButton" Content="Computer List" 
+                            Click="ComputerListButton_Click" Margin="0,0,10,0" Width="120"/>
                     <Button x:Name="LangButton" Content="עברית / English" 
                             Click="LangButton_Click" Margin="0,0,10,0" Width="150"/>
                     <Button x:Name="AboutButton" Content="About" Click="AboutButton_Click" Width="100"/>
